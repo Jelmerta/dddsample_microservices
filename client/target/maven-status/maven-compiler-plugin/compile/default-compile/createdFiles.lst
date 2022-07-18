@@ -1,0 +1,6 @@
+se/citerus/dddsample/client/location/Entity.class
+client/rmiserver/ServerOperation.class
+client/rmiinterface/RMIInterface.class
+se/citerus/dddsample/client/location/UnLocode.class
+client/rmiclient/ClientOperation.class
+se/citerus/dddsample/client/location/Location.class
