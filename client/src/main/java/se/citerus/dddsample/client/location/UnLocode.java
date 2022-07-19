@@ -1,27 +1,8 @@
-//package se.citerus.dddsample.client.location;
-//
-//public interface UnLocode {
-////    Long getId();
-//
-//    String idString();
-//
-//    @Override
-//    boolean equals(Object o);
-//
-//    @Override
-//    int hashCode();
-//
-//    boolean sameValueAs(UnLocode other);
-//
-//    @Override
-//    String toString();
-//}
-
 package se.citerus.dddsample.client.location;
 
 import org.apache.commons.lang.Validate;
+import se.citerus.dddsample.domain.shared.ValueObject;
 
-import java.io.Serializable;
 import java.util.regex.Pattern;
 
 /**
@@ -30,7 +11,7 @@ import java.util.regex.Pattern;
  * http://www.unece.org/cefact/locode/
  * http://www.unece.org/cefact/locode/DocColumnDescription.htm#LOCODE
  */
-public final class UnLocode implements Serializable {
+public final class UnLocode implements se.citerus.dddsample.domain.shared.ValueObject<UnLocode> { //TODO ValueObject is needed as dependency
 
     private String unlocode;
 
@@ -51,14 +32,14 @@ public final class UnLocode implements Serializable {
         this.unlocode = countryAndLocation.toUpperCase();
     }
 
-//  @Override public Long getId() {
-//    return id;
-//  }
-
+    /**
+     * @return country code and location code concatenated, always upper case.
+     */
     public String idString() {
         return unlocode;
     }
 
+    @Override
     public boolean equals(final Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -73,6 +54,7 @@ public final class UnLocode implements Serializable {
         return unlocode.hashCode();
     }
 
+    @Override
     public boolean sameValueAs(UnLocode other) {
         return other != null && this.unlocode.equals(other.unlocode);
     }
@@ -86,5 +68,12 @@ public final class UnLocode implements Serializable {
         // Needed by Hibernate
     }
 
-}
+    // [JTA] Added these methods as we require them for Hibernate in our client
+    public String getUnlocode() {
+        return unlocode;
+    }
 
+    public void setUnlocode(String unlocode) {
+        this.unlocode = unlocode;
+    }
+}
