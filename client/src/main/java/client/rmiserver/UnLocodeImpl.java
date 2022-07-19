@@ -49,6 +49,9 @@ public class UnLocodeImpl extends UnicastRemoteObject implements UnLocodeInterfa
 
     @Override
     public boolean sameValueAs(UnLocodeInterface other) throws RemoteException {
+        System.err.println("timing test");
+        System.err.println(other);
+        System.err.println(unLocode);
         return unLocode.sameValueAs(other.getWrappedObject());
     }
 

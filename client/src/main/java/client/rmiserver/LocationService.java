@@ -17,9 +17,11 @@ public class LocationService extends UnicastRemoteObject implements LocationServ
     @Override
     public UnLocodeInterface newUnLocode(String countryAndLocation) throws RemoteException {
         UnLocode unLocode = new UnLocode(countryAndLocation);
-        return new UnLocodeImpl(unLocode);
+        UnLocodeImpl unLocodeImpl = new UnLocodeImpl(unLocode);
+        Registry registry = LocateRegistry.getRegistry(1099);
+        registry.rebind("//localhost/MyServer/" + unLocode.getUnlocode(), unLocodeImpl);
         // Registry bind unlocodeimpl? is that even required? How is it accessed otherwise? TODO
-
+        return unLocodeImpl;
     }
 
     public static void main(String[] args) {
