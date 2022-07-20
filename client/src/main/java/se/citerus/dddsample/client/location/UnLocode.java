@@ -1,7 +1,6 @@
 package se.citerus.dddsample.client.location;
 
 import org.apache.commons.lang.Validate;
-import se.citerus.dddsample.domain.shared.ValueObject;
 
 import java.util.regex.Pattern;
 
@@ -37,16 +36,6 @@ public final class UnLocode implements se.citerus.dddsample.domain.shared.ValueO
      */
     public String idString() {
         return unlocode;
-    }
-
-    @Override
-    public boolean equals(final Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        UnLocode other = (UnLocode) o;
-
-        return sameValueAs(other);
     }
 
     @Override

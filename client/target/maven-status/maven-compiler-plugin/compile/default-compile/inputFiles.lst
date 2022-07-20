@@ -3,7 +3,10 @@
 /home/jelmer/Documents/Software Engineering/Master Project/projects/dddsample-micro/client/src/main/java/client/rmiserver/UnLocodeImpl.java
 /home/jelmer/Documents/Software Engineering/Master Project/projects/dddsample-micro/client/src/main/java/se/citerus/dddsample/domain/shared/ValueObject.java
 /home/jelmer/Documents/Software Engineering/Master Project/projects/dddsample-micro/client/src/main/java/se/citerus/dddsample/client/location/UnLocode.java
+/home/jelmer/Documents/Software Engineering/Master Project/projects/dddsample-micro/client/src/main/java/client/rmiserver/ObjectWrapper.java
 /home/jelmer/Documents/Software Engineering/Master Project/projects/dddsample-micro/client/src/main/java/client/rmiinterface/UnLocodeInterface.java
+/home/jelmer/Documents/Software Engineering/Master Project/projects/dddsample-micro/client/src/main/java/client/rmiinterface/ObjectInterface.java
 /home/jelmer/Documents/Software Engineering/Master Project/projects/dddsample-micro/client/src/main/java/client/rmiserver/LocationService.java
 /home/jelmer/Documents/Software Engineering/Master Project/projects/dddsample-micro/client/src/main/java/se/citerus/dddsample/client/location/Location.java
+/home/jelmer/Documents/Software Engineering/Master Project/projects/dddsample-micro/client/src/main/java/client/rmiserver/ObjectImpl.java
 /home/jelmer/Documents/Software Engineering/Master Project/projects/dddsample-micro/client/src/main/java/se/citerus/dddsample/client/location/Entity.java

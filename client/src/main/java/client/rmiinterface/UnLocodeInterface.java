@@ -22,9 +22,11 @@ public interface UnLocodeInterface extends Remote {
 
     // TODO We should probably just detect if any of these methods are implemented in the base class and add them if necessary with a different method name
 
-    boolean equalsCall(final Object o) throws RemoteException;
-    int hashCodeCall() throws RemoteException;
-    String toStringCall() throws RemoteException;
+    // TODO Do we want these calls? EqualsCall is difficult because RMI has complains related to parameter being passed
+    //final Object o
+//    boolean equalsCall(final Object other) throws RemoteException;
+//    int hashCodeCall() throws RemoteException;
+//    String toStringCall() throws RemoteException;
 
     boolean sameValueAs(UnLocodeInterface other) throws RemoteException;
 

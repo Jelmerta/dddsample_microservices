@@ -32,26 +32,24 @@ public class UnLocodeImpl extends UnicastRemoteObject implements UnLocodeInterfa
 
     // TODO These are not possible because class extends RemoteObject?
     // Clashes with method from RemoteObject
-    @Override
-    public boolean equalsCall(final Object o) throws RemoteException {
-        return unLocode.equals(o);
-    }
+//    @Override
+//    public boolean equalsCall(final Object o) throws RemoteException {
+//        return true;
+//        return unLocode.equals(o);
+//    }
 
-    @Override
-    public int hashCodeCall() throws RemoteException {
-        return unLocode.hashCode();
-    }
+//    @Override
+//    public int hashCodeCall() throws RemoteException {
+//        return unLocode.hashCode();
+//    }
 
-    @Override
-    public String toStringCall() throws RemoteException {
-        return unLocode.toString();
-    }
+//    @Override
+//    public String toStringCall() throws RemoteException {
+//        return unLocode.toString();
+//    }
 
     @Override
     public boolean sameValueAs(UnLocodeInterface other) throws RemoteException {
-        System.err.println("timing test");
-        System.err.println(other);
-        System.err.println(unLocode);
         return unLocode.sameValueAs(other.getWrappedObject());
     }
 

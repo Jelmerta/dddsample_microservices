@@ -3,5 +3,8 @@ client/rmiserver/UnLocodeImpl.class
 se/citerus/dddsample/client/location/UnLocode.class
 se/citerus/dddsample/domain/shared/ValueObject.class
 client/rmiserver/LocationService.class
+client/rmiserver/ObjectWrapper.class
 client/rmiinterface/LocationServiceInterface.class
+client/rmiserver/ObjectImpl.class
 client/rmiinterface/UnLocodeInterface.class
+client/rmiinterface/ObjectInterface.class

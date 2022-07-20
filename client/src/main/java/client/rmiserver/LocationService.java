@@ -4,6 +4,7 @@ import client.rmiinterface.LocationServiceInterface;
 import client.rmiinterface.UnLocodeInterface;
 import se.citerus.dddsample.client.location.UnLocode;
 
+import java.rmi.RMISecurityManager;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -25,6 +26,16 @@ public class LocationService extends UnicastRemoteObject implements LocationServ
     }
 
     public static void main(String[] args) {
+        // TODO Ugly full path to policy
+        // Only required for passing references by value
+
+        System.setProperty("java.security.policy", "file:///home/jelmer/Documents/Software Engineering/Master Project/projects/dddsample-micro/client/src/main/resources/security.policy");
+        System.setProperty("java.security.policyfile", "file:///home/jelmer/Documents/Software Engineering/Master Project/projects/dddsample-micro/client/src/main/resources/security.policy");
+        if (System.getSecurityManager() == null) {
+            RMISecurityManager securityManager = new RMISecurityManager();
+            System.setSecurityManager(securityManager);
+        }
+
 
         try {
             LocationService locationService = new LocationService();
